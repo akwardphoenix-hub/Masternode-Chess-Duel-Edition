@@ -1,0 +1,10 @@
+{
+  "allowlist": [
+    "api.github.com",
+    "esm.ubuntu.com",
+    "azure.archive.ubuntu.com",
+    "*.ubuntu.com",
+    "*.github.com"
+  ],
+  "description": "Allowlist for GitHub API and Ubuntu package repositories to prevent firewall blocks during CI/CD"
+}
