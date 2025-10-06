@@ -30,7 +30,7 @@ jobs:
 
       - name: Install deps (no audit, no scripts)
         run: |
-          npm ci --no-audit --prefer-offline --no-optional
+          npm ci --no-audit --prefer-offline
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
