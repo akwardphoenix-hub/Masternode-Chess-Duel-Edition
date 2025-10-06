@@ -1,0 +1,243 @@
+{
+  "gameRules": {
+    "boardSize": {
+      "rows": 8,
+      "cols": 8
+    },
+    "pieceStats": {
+      "pawn": { "baseHP": 30, "baseAttack": 5, "baseBounty": 10 },
+      "knight": { "baseHP": 60, "baseAttack": 15, "baseBounty": 30 },
+      "bishop": { "baseHP": 50, "baseAttack": 12, "baseBounty": 30 },
+      "rook": { "baseHP": 80, "baseAttack": 18, "baseBounty": 50 },
+      "queen": { "baseHP": 100, "baseAttack": 25, "baseBounty": 90 },
+      "king": { "baseHP": 150, "baseAttack": 20, "baseBounty": 0 }
+    },
+    "duelTypes": [
+      {
+        "type": "swipe",
+        "description": "Swipe arrows in correct direction",
+        "scoringMethod": "Match correct swipes, penalize wrong ones",
+        "maxScore": 100
+      },
+      {
+        "type": "rhythm",
+        "description": "Hit notes at the right time",
+        "scoringMethod": "Perfect/Good/Miss timing system",
+        "maxScore": 100
+      },
+      {
+        "type": "mirror",
+        "description": "Replicate pattern shown",
+        "scoringMethod": "Match pattern accuracy",
+        "maxScore": 100
+      }
+    ],
+    "themes": {
+      "roman": {
+        "name": "Roman Empire",
+        "buff": { "type": "attack", "value": 1.2 },
+        "description": "Roman pieces deal 20% more damage"
+      },
+      "french": {
+        "name": "French Nobility",
+        "buff": { "type": "defense", "value": 1.15 },
+        "description": "French pieces have 15% more HP"
+      },
+      "middleEastern": {
+        "name": "Middle-Eastern Sultanate",
+        "buff": { "type": "xp", "value": 1.25 },
+        "description": "Middle-Eastern pieces gain 25% more XP"
+      },
+      "pirate": {
+        "name": "Pirate Crew",
+        "buff": { "type": "bounty", "value": 1.3 },
+        "description": "Pirate pieces earn 30% more bounty"
+      },
+      "oldEnglish": {
+        "name": "Old English Kingdom",
+        "buff": { "type": "balanced", "value": 1.1 },
+        "description": "Old English pieces have 10% bonus to all stats"
+      },
+      "cyberpunk": {
+        "name": "Cyberpunk Future",
+        "buff": { "type": "criticalChance", "value": 0.15 },
+        "description": "Cyberpunk pieces have 15% critical hit chance"
+      }
+    },
+    "equipmentSlots": ["weapon", "armor", "accessory"],
+    "xpLevels": [0, 100, 250, 500, 1000, 1500, 2500, 4000, 6000, 10000]
+  },
+  "sampleMatch": {
+    "matchId": "match_001",
+    "theme": "pirate",
+    "turn": 5,
+    "whitePlayer": {
+      "pieces": [
+        {
+          "id": "w_king",
+          "type": "king",
+          "position": { "row": 0, "col": 4 },
+          "hp": 150,
+          "maxHP": 150,
+          "xp": 50,
+          "level": 1,
+          "bounty": 0,
+          "equipment": {
+            "weapon": null,
+            "armor": { "id": "iron_crown", "name": "Iron Crown", "defense": 10 },
+            "accessory": null
+          }
+        },
+        {
+          "id": "w_queen",
+          "type": "queen",
+          "position": { "row": 0, "col": 3 },
+          "hp": 85,
+          "maxHP": 100,
+          "xp": 180,
+          "level": 2,
+          "bounty": 90,
+          "equipment": {
+            "weapon": { "id": "royal_scepter", "name": "Royal Scepter", "attack": 8 },
+            "armor": { "id": "silk_robe", "name": "Silk Robe", "defense": 5 },
+            "accessory": { "id": "ruby_ring", "name": "Ruby Ring", "bonus": "critRate", "value": 5 }
+          }
+        },
+        {
+          "id": "w_rook1",
+          "type": "rook",
+          "position": { "row": 0, "col": 0 },
+          "hp": 80,
+          "maxHP": 80,
+          "xp": 120,
+          "level": 2,
+          "bounty": 50,
+          "equipment": {
+            "weapon": { "id": "cannon", "name": "Cannon", "attack": 10 },
+            "armor": null,
+            "accessory": null
+          }
+        },
+        {
+          "id": "w_knight1",
+          "type": "knight",
+          "position": { "row": 2, "col": 2 },
+          "hp": 60,
+          "maxHP": 60,
+          "xp": 90,
+          "level": 1,
+          "bounty": 30,
+          "equipment": {
+            "weapon": { "id": "lance", "name": "Lance", "attack": 5 },
+            "armor": { "id": "chain_mail", "name": "Chain Mail", "defense": 8 },
+            "accessory": null
+          }
+        },
+        {
+          "id": "w_pawn1",
+          "type": "pawn",
+          "position": { "row": 3, "col": 0 },
+          "hp": 30,
+          "maxHP": 30,
+          "xp": 25,
+          "level": 1,
+          "bounty": 10,
+          "equipment": {
+            "weapon": null,
+            "armor": null,
+            "accessory": null
+          }
+        }
+      ]
+    },
+    "blackPlayer": {
+      "pieces": [
+        {
+          "id": "b_king",
+          "type": "king",
+          "position": { "row": 7, "col": 4 },
+          "hp": 150,
+          "maxHP": 150,
+          "xp": 30,
+          "level": 1,
+          "bounty": 0,
+          "equipment": {
+            "weapon": null,
+            "armor": { "id": "dark_crown", "name": "Dark Crown", "defense": 10 },
+            "accessory": null
+          }
+        },
+        {
+          "id": "b_queen",
+          "type": "queen",
+          "position": { "row": 7, "col": 3 },
+          "hp": 100,
+          "maxHP": 100,
+          "xp": 150,
+          "level": 2,
+          "bounty": 90,
+          "equipment": {
+            "weapon": { "id": "dark_scepter", "name": "Dark Scepter", "attack": 7 },
+            "armor": { "id": "obsidian_dress", "name": "Obsidian Dress", "defense": 6 },
+            "accessory": null
+          }
+        },
+        {
+          "id": "b_rook1",
+          "type": "rook",
+          "position": { "row": 7, "col": 7 },
+          "hp": 65,
+          "maxHP": 80,
+          "xp": 95,
+          "level": 1,
+          "bounty": 50,
+          "equipment": {
+            "weapon": { "id": "ballista", "name": "Ballista", "attack": 9 },
+            "armor": null,
+            "accessory": null
+          }
+        },
+        {
+          "id": "b_bishop1",
+          "type": "bishop",
+          "position": { "row": 5, "col": 5 },
+          "hp": 50,
+          "maxHP": 50,
+          "xp": 70,
+          "level": 1,
+          "bounty": 30,
+          "equipment": {
+            "weapon": { "id": "staff", "name": "Mystic Staff", "attack": 6 },
+            "armor": { "id": "robe", "name": "Wizard Robe", "defense": 4 },
+            "accessory": { "id": "spell_tome", "name": "Spell Tome", "bonus": "xpGain", "value": 10 }
+          }
+        },
+        {
+          "id": "b_pawn1",
+          "type": "pawn",
+          "position": { "row": 6, "col": 4 },
+          "hp": 20,
+          "maxHP": 30,
+          "xp": 40,
+          "level": 1,
+          "bounty": 10,
+          "equipment": {
+            "weapon": { "id": "dagger", "name": "Rusty Dagger", "attack": 2 },
+            "armor": null,
+            "accessory": null
+          }
+        }
+      ]
+    },
+    "lastDuel": {
+      "attacker": "w_knight1",
+      "defender": "b_pawn1",
+      "duelType": "swipe",
+      "attackerScore": 85,
+      "defenderScore": 60,
+      "damageDealt": 25,
+      "result": "attacker_wins",
+      "xpGained": { "attacker": 15, "defender": 5 }
+    }
+  }
+}
