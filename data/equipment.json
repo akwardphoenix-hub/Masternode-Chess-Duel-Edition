@@ -1,0 +1,60 @@
+{
+  "equipment": [
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "cost": 100,
+      "effects": {
+        "damage": 5
+      },
+      "description": "+5 damage"
+    },
+    {
+      "id": "steel_armor",
+      "name": "Steel Armor",
+      "cost": 150,
+      "effects": {
+        "hp": 25
+      },
+      "description": "+25 HP"
+    },
+    {
+      "id": "boots_of_speed",
+      "name": "Boots of Speed",
+      "cost": 120,
+      "effects": {
+        "initiative": 2
+      },
+      "description": "+2 initiative"
+    },
+    {
+      "id": "ruby_ring",
+      "name": "Ruby Ring",
+      "cost": 200,
+      "effects": {
+        "damage": 8,
+        "hp": 15
+      },
+      "description": "+8 damage, +15 HP"
+    },
+    {
+      "id": "scholars_tome",
+      "name": "Scholar's Tome",
+      "cost": 180,
+      "effects": {
+        "xpMultiplier": 1.5
+      },
+      "description": "+50% XP gain"
+    },
+    {
+      "id": "golden_crown",
+      "name": "Golden Crown",
+      "cost": 300,
+      "effects": {
+        "hp": 50,
+        "initiative": 1
+      },
+      "description": "+50 HP, +1 initiative"
+    }
+  ]
+}

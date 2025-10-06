@@ -1,0 +1,94 @@
+{
+  "modifiers": [
+    {
+      "id": "pawn_hp_buff",
+      "name": "Pawn HP Buff",
+      "description": "Increases pawn HP by 20",
+      "effect": {
+        "target": "pawn",
+        "stat": "hp",
+        "value": 20
+      },
+      "enabled": false
+    },
+    {
+      "id": "bounty_economy",
+      "name": "Bounty Economy",
+      "description": "Doubles all bounty rewards",
+      "effect": {
+        "target": "all",
+        "stat": "bounty",
+        "multiplier": 2
+      },
+      "enabled": false
+    },
+    {
+      "id": "healer_buff",
+      "name": "Healer Buff",
+      "description": "Bishops can heal 15 HP per turn",
+      "effect": {
+        "target": "bishop",
+        "stat": "healing",
+        "value": 15
+      },
+      "enabled": false
+    },
+    {
+      "id": "aggressive_knights",
+      "name": "Aggressive Knights",
+      "description": "Knights gain +10 damage",
+      "effect": {
+        "target": "knight",
+        "stat": "damage",
+        "value": 10
+      },
+      "enabled": false
+    },
+    {
+      "id": "fortified_rooks",
+      "name": "Fortified Rooks",
+      "description": "Rooks gain +30 HP",
+      "effect": {
+        "target": "rook",
+        "stat": "hp",
+        "value": 30
+      },
+      "enabled": false
+    },
+    {
+      "id": "swift_pieces",
+      "name": "Swift Pieces",
+      "description": "All pieces gain +1 initiative",
+      "effect": {
+        "target": "all",
+        "stat": "initiative",
+        "value": 1
+      },
+      "enabled": false
+    },
+    {
+      "id": "royal_guard",
+      "name": "Royal Guard",
+      "description": "King gains +50 HP and +5 damage",
+      "effect": {
+        "target": "king",
+        "stats": {
+          "hp": 50,
+          "damage": 5
+        }
+      },
+      "enabled": false
+    },
+    {
+      "id": "xp_boost",
+      "name": "XP Boost",
+      "description": "All XP gains increased by 50%",
+      "effect": {
+        "target": "all",
+        "stat": "xp",
+        "multiplier": 1.5
+      },
+      "enabled": false
+    }
+  ]
+}

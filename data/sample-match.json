@@ -1,0 +1,60 @@
+{
+  "matchId": "sample-001",
+  "themeWhite": "Roman",
+  "themeBlack": "Cyberpunk",
+  "currentTurn": "white",
+  "turnNumber": 1,
+  "board": [
+    ["r", "n", "b", "q", "k", "b", "n", "r"],
+    ["p", "p", "p", "p", "p", "p", "p", "p"],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    ["P", "P", "P", "P", "P", "P", "P", "P"],
+    ["R", "N", "B", "Q", "K", "B", "N", "R"]
+  ],
+  "pieces": {
+    "white": [
+      {"type": "pawn", "position": [6, 0], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 1], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 2], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 3], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 4], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 5], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 6], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [6, 7], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "rook", "position": [7, 0], "hp": 100, "maxHp": 100, "xp": 0, "level": 1, "equipment": []},
+      {"type": "knight", "position": [7, 1], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "bishop", "position": [7, 2], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "queen", "position": [7, 3], "hp": 125, "maxHp": 125, "xp": 0, "level": 1, "equipment": []},
+      {"type": "king", "position": [7, 4], "hp": 200, "maxHp": 200, "xp": 0, "level": 1, "equipment": []},
+      {"type": "bishop", "position": [7, 5], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "knight", "position": [7, 6], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "rook", "position": [7, 7], "hp": 100, "maxHp": 100, "xp": 0, "level": 1, "equipment": []}
+    ],
+    "black": [
+      {"type": "pawn", "position": [1, 0], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 1], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 2], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 3], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 4], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 5], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 6], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "pawn", "position": [1, 7], "hp": 50, "maxHp": 50, "xp": 0, "level": 1, "equipment": []},
+      {"type": "rook", "position": [0, 0], "hp": 100, "maxHp": 100, "xp": 0, "level": 1, "equipment": []},
+      {"type": "knight", "position": [0, 1], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "bishop", "position": [0, 2], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "queen", "position": [0, 3], "hp": 125, "maxHp": 125, "xp": 0, "level": 1, "equipment": []},
+      {"type": "king", "position": [0, 4], "hp": 200, "maxHp": 200, "xp": 0, "level": 1, "equipment": []},
+      {"type": "bishop", "position": [0, 5], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "knight", "position": [0, 6], "hp": 75, "maxHp": 75, "xp": 0, "level": 1, "equipment": []},
+      {"type": "rook", "position": [0, 7], "hp": 100, "maxHp": 100, "xp": 0, "level": 1, "equipment": []}
+    ]
+  },
+  "gold": {
+    "white": 0,
+    "black": 0
+  },
+  "log": []
+}

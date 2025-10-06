@@ -1,0 +1,136 @@
+{
+  "duelModes": [
+    {
+      "id": "rhythm_taps",
+      "name": "Rhythm Taps",
+      "description": "Tap the targets in rhythm",
+      "difficulty": {
+        "easy": {
+          "targets": 3,
+          "timeWindow": 2000
+        },
+        "medium": {
+          "targets": 5,
+          "timeWindow": 1500
+        },
+        "hard": {
+          "targets": 7,
+          "timeWindow": 1000
+        }
+      },
+      "scoring": {
+        "perfect": {
+          "points": 100,
+          "timeWindow": 150
+        },
+        "good": {
+          "points": 75,
+          "timeWindow": 300
+        },
+        "hit": {
+          "points": 50,
+          "timeWindow": 500
+        }
+      }
+    },
+    {
+      "id": "shape_tracing",
+      "name": "Shape Tracing",
+      "description": "Trace the shape accurately",
+      "difficulty": {
+        "easy": {
+          "points": 4,
+          "timeLimit": 3000
+        },
+        "medium": {
+          "points": 6,
+          "timeLimit": 2500
+        },
+        "hard": {
+          "points": 8,
+          "timeLimit": 2000
+        }
+      },
+      "scoring": {
+        "perfect": {
+          "accuracyThreshold": 0.95,
+          "points": 100
+        },
+        "good": {
+          "accuracyThreshold": 0.85,
+          "points": 75
+        },
+        "hit": {
+          "accuracyThreshold": 0.70,
+          "points": 50
+        }
+      }
+    },
+    {
+      "id": "mirror_paths",
+      "name": "Mirror Paths",
+      "description": "Follow the mirrored pattern",
+      "difficulty": {
+        "easy": {
+          "steps": 3,
+          "timePerStep": 1500
+        },
+        "medium": {
+          "steps": 5,
+          "timePerStep": 1200
+        },
+        "hard": {
+          "steps": 7,
+          "timePerStep": 1000
+        }
+      },
+      "scoring": {
+        "perfect": {
+          "points": 100,
+          "errorMargin": 0.05
+        },
+        "good": {
+          "points": 75,
+          "errorMargin": 0.15
+        },
+        "hit": {
+          "points": 50,
+          "errorMargin": 0.30
+        }
+      }
+    },
+    {
+      "id": "combo_swipes",
+      "name": "Combo Swipes",
+      "description": "Execute the combo sequence",
+      "difficulty": {
+        "easy": {
+          "combo": 3,
+          "timeWindow": 2000
+        },
+        "medium": {
+          "combo": 5,
+          "timeWindow": 1800
+        },
+        "hard": {
+          "combo": 8,
+          "timeWindow": 1500
+        }
+      },
+      "scoring": {
+        "perfect": {
+          "points": 100,
+          "accuracy": 0.95
+        },
+        "good": {
+          "points": 75,
+          "accuracy": 0.85
+        },
+        "hit": {
+          "points": 50,
+          "accuracy": 0.70
+        }
+      }
+    }
+  ]
+}

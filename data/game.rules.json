@@ -1,0 +1,56 @@
+{
+  "damageModel": {
+    "baseDamage": {
+      "pawn": 10,
+      "knight": 15,
+      "bishop": 15,
+      "rook": 20,
+      "queen": 25,
+      "king": 5
+    },
+    "multipliers": {
+      "perfect": 2.0,
+      "good": 1.5,
+      "hit": 1.0,
+      "miss": 0.0
+    }
+  },
+  "hp": {
+    "pawn": 50,
+    "knight": 75,
+    "bishop": 75,
+    "rook": 100,
+    "queen": 125,
+    "king": 200
+  },
+  "initiative": {
+    "pawn": 3,
+    "knight": 5,
+    "bishop": 4,
+    "rook": 2,
+    "queen": 6,
+    "king": 1
+  },
+  "progression": {
+    "xpPerHit": 5,
+    "xpPerPerfect": 15,
+    "xpPerKill": 50,
+    "levelThresholds": [0, 100, 250, 500, 1000],
+    "kingTricklePercent": 0.1
+  },
+  "bounty": {
+    "pawn": 50,
+    "knight": 100,
+    "bishop": 100,
+    "rook": 150,
+    "queen": 200,
+    "king": 500
+  },
+  "winConditions": {
+    "checkmate": true,
+    "councilVariant": {
+      "enabled": false,
+      "protectionThreshold": 0.5
+    }
+  }
+}
