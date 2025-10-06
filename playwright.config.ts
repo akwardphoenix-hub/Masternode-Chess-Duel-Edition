@@ -1,4 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   testDir: './e2e',
@@ -20,7 +25,7 @@ export default defineConfig({
     reuseExistingServer: true,
     timeout: 120_000,
   },
-  globalSetup: require.resolve('./e2e/_setup.ts'),
+  globalSetup: join(__dirname, 'e2e', '_setup.ts'),
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     // Uncomment if desired:
