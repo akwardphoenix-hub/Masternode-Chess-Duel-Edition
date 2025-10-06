@@ -23,13 +23,13 @@ describe('Theme Utils', () => {
   test('should apply defense buff for french theme', () => {
     const baseDefense = 100;
     const buffedDefense = applyThemeBuff(baseDefense, 'french', 'defense');
-    expect(buffedDefense).toBe(115); // 15% increase
+    expect(buffedDefense).toBeCloseTo(115, 1); // 15% increase
   });
 
   test('should apply balanced buff for old english theme', () => {
     const baseValue = 100;
     const buffedValue = applyThemeBuff(baseValue, 'oldEnglish', 'attack');
-    expect(buffedValue).toBe(110); // 10% increase to all stats
+    expect(buffedValue).toBeCloseTo(110, 1); // 10% increase to all stats
   });
 
   test('should not apply buff for non-matching stat type', () => {

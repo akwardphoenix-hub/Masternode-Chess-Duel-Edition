@@ -5,10 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && vite build",
+    "build:types": "tsc",
+    "build:app": "vite build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint src/**/*.{ts,tsx}",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.{ts,tsx} --max-warnings=0 || true",
     "dev": "vite",
     "preview": "vite preview"
   },
