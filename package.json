@@ -1,0 +1,24 @@
+{
+  "name": "masternode-chess-duel-edition",
+  "version": "1.0.0",
+  "description": "Literally empirically the coolest most bamboozelest Chess game ever created besides actual Chess. This concept was ripped and stolen from chess cascadingly through all of the years of video games and board games. All the games all your games are belong to us.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "preview:ci": "vite preview --host 127.0.0.1 --port 5173 --strictPort",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test": "npm run build && npm run test:e2e"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}
