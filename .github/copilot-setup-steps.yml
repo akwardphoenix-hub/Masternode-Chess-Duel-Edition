@@ -1,0 +1,18 @@
+# Pre-install setup steps that run BEFORE firewall is enabled
+# This ensures all dependencies are installed before network restrictions apply
+
+steps:
+  - name: Setup Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: '20'
+      cache: 'npm'
+
+  - name: Install npm dependencies
+    run: npm ci
+
+  - name: Install Playwright browsers
+    run: npx playwright install --with-deps chromium
+
+  # All network-dependent operations should be completed by this point
+  # After this, the firewall will be enabled and no external network calls will succeed
