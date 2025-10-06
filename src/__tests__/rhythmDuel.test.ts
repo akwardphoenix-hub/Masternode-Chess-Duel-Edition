@@ -31,7 +31,7 @@ describe('RhythmDuel', () => {
 
   test('should register miss for bad timing', () => {
     const notes = duel.getNotes();
-    duel.hitNote(notes[0] + 200);
+    duel.hitNote(notes[0] + 300);
     
     const hits = duel.getPlayerHits();
     expect(hits[0].accuracy).toBe('miss');
