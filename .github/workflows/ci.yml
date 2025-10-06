@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Replace esm.ubuntu.com with azure.archive.ubuntu.com to avoid firewall issues
+      - name: Replace APT sources to avoid firewall blocks
+        run: |
+          sudo sed -i 's|http://esm.ubuntu.com|http://azure.archive.ubuntu.com|g' /etc/apt/sources.list.d/*.list || true
+          sudo sed -i 's|https://esm.ubuntu.com|http://azure.archive.ubuntu.com|g' /etc/apt/sources.list.d/*.list || true
+      
+      # Install Node.js 20 before firewall rules apply
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      # Install Python 3.10 before firewall rules apply
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      # Update package lists after source replacement
+      - name: Update APT package lists
+        run: |
+          sudo apt-get update || true
+      
+      # Verify installations
+      - name: Verify Node.js and Python versions
+        run: |
+          node --version
+          npm --version
+          python --version
+          pip --version
+      
+      # Install dependencies (placeholder for actual project dependencies)
+      - name: Install Node.js dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found, skipping npm install"
+          fi
+      
+      - name: Install Python dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, skipping pip install"
+          fi
+      
+      # Build step (placeholder)
+      - name: Build
+        run: |
+          if [ -f package.json ] && grep -q '"build"' package.json; then
+            npm run build
+          else
+            echo "No build script found, skipping build"
+          fi
+      
+      # Test step (placeholder)
+      - name: Run tests
+        run: |
+          if [ -f package.json ] && grep -q '"test"' package.json; then
+            npm test
+          else
+            echo "No test script found, skipping tests"
+          fi
+      
+      # E2E tests (placeholder)
+      - name: Run E2E tests
+        run: |
+          if [ -f package.json ] && grep -q '"test:e2e"' package.json; then
+            npm run test:e2e
+          else
+            echo "No E2E test script found, skipping E2E tests"
+          fi
